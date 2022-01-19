@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            /* para mudar o main axis e cross axis*/
+            flex-direction: row;
+            max-width: 50rem;
+            padding: 1rem;
+            background-color: yellowgreen;
+        }
+        .image-container{
+            width: 50%;
+            padding: .5rem;
+            background-color: red;
+        }
+        .image-container img{
+            width: 100%;
+
+        }
+        .content-container{
+            width: 50%;
+            padding: .5rem;
+            background-color: blueviolet;
+        }
+        .content-container p{
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container{
+                flex-direction: column;
+            }
+            .image-container, .content-container{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img 
+                src="https://previews.123rf.com/images/alhovik/alhovik1709/alhovik170900031/86481591-breaking-news-background-world-global-tv-news-banner-design.jpg"
+                alt="News"
+            >
+        </div>
+        <div class="content-container">
+            <h2>Title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Iure adipisci tempore quibusdam corrupti, fugit optio nam fugiat architecto.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
